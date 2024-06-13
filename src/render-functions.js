@@ -47,10 +47,10 @@ export const renderStatus = (statusDiv, statusInfoObj) => {
   statusDiv.append(h2, p);
 };
 
-export const renderUsers = (usersUI, users) => {
-  usersUI.replaceChildren();
+export const renderUsers = (usersUl, users) => {
+  usersUl.replaceChildren();
   // // could also do
-  // usersUI.textContent = "";
+  // usersUl.textContent = "";
 
   for (let user of users) {
     // create elements
@@ -65,14 +65,14 @@ export const renderUsers = (usersUI, users) => {
     button.textContent = `Load ${user.username}'s posts`;
 
     li.append(button);
-    usersUI.append(li);
+    usersUl.append(li);
   }
 };
 
-export const renderPosts = (postsUI, posts) => {
-  postsUI.replaceChildren();
+export const renderPosts = (postsUl, posts) => {
+  postsUl.replaceChildren();
   // // could also do
-  // postsUI.textContent = "";
+  // postsUl.textContent = "";
 
   for (let post of posts) {
     // create elements
@@ -85,7 +85,7 @@ export const renderPosts = (postsUI, posts) => {
     p.textContent = post.body;
 
     li.append(h2, p);
-    postsUI.append(li);
+    postsUl.append(li);
   }
 };
 
